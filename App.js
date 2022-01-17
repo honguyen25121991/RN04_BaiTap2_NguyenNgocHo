@@ -11,8 +11,9 @@ const App = () => {
         backgroundColor: '#bbf',
       }}>
       <Text style={{fontSize: 24, fontWeight: '700'}}>
-        Hello React Native App
+        Hello React Native App11
       </Text>
+      <Text>Xin chao</Text>
     </View>
   );
 };
