@@ -5,11 +5,11 @@ export default class ExamStyles extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={[styles.box, styles.green]}>
+        <View style={[styles.box, styles.box__top, styles.green]}>
           <View style={[styles.box_2, styles.yellow]}></View>
           <View style={[styles.box_2, styles.yellow]}></View>
         </View>
-        <View style={[styles.box, styles.purple]}>
+        <View style={[styles.box, styles.box__bottom, styles.purple]}>
           <View style={[styles.box_3]}>
             <View style={[styles.box, styles.box_4, styles.blue]}></View>
             <View style={[styles.box, styles.box_4, styles.blue]}></View>
@@ -32,8 +32,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 20,
-    marginVertical: 10,
+    // borderRadius: 20,
+  },
+  box__top: {
+    marginBottom: 10,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+  },
+  box__bottom: {
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    marginTop: 10,
   },
   box_2: {
     flex: 1,
@@ -47,9 +56,10 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     width: '85%',
   },
-
   box_4: {
-    margin: 15,
+    borderRadius: 20,
+    marginVertical: 25,
+    marginHorizontal: 20,
   },
 
   purple: {
