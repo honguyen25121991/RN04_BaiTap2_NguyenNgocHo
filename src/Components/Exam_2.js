@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   box_2: {
     flex: 1,
     borderRadius: 20,
-    width: '90%',
+    width: '85%',
     marginVertical: 30,
   },
   box_3: {
