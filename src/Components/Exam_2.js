@@ -5,18 +5,18 @@ export default class ExamStyles extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={[styles.box, styles.box__top, styles.green]}>
+        <View style={[styles.box, styles.box__header, styles.green]}>
           <View style={[styles.box_2, styles.yellow]}></View>
           <View style={[styles.box_2, styles.yellow]}></View>
         </View>
         <View style={[styles.box, styles.box__bottom, styles.purple]}>
           <View style={[styles.box_3]}>
-            <View style={[styles.box, styles.box_4, styles.blue]}></View>
-            <View style={[styles.box, styles.box_4, styles.blue]}></View>
+            <View style={[styles.box_4, styles.blue]}></View>
+            <View style={[styles.box_4, styles.blue]}></View>
           </View>
           <View style={[styles.box_3]}>
-            <View style={[styles.box, styles.box_4, styles.blue]}></View>
-            <View style={[styles.box, styles.box_4, styles.blue]}></View>
+            <View style={[styles.box_4, styles.blue]}></View>
+            <View style={[styles.box_4, styles.blue]}></View>
           </View>
         </View>
       </View>
@@ -32,9 +32,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    // borderRadius: 20,
   },
-  box__top: {
+  box__header: {
     marginBottom: 10,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
@@ -54,12 +53,14 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     borderRadius: 20,
-    width: '85%',
   },
   box_4: {
+    flex: 1,
     borderRadius: 20,
-    marginVertical: 25,
-    marginHorizontal: 20,
+    marginLeft: 35,
+    marginRight: 35,
+    marginVertical: 15,
+    height: '85%',
   },
 
   purple: {
