@@ -64,15 +64,15 @@ const styles = StyleSheet.create({
   },
 
   purple: {
-    backgroundColor: '#c9c9ff',
+    backgroundColor: '#c8c8fA',
   },
   blue: {
-    backgroundColor: '#3d85c6',
+    backgroundColor: '#4f82c0',
   },
   green: {
-    backgroundColor: '#96cc96',
+    backgroundColor: '#A1c99A',
   },
   yellow: {
-    backgroundColor: '#ffffbb',
+    backgroundColor: '#ffffc2',
   },
 });
