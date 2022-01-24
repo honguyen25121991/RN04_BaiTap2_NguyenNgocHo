@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
-import Alto_icon from '../../Components/Images/Alto_0.png';
-import Alto_0 from '../../Components/Images/Alto_0.png';
+import Alto_icon from '../../Images/Alto_icon.png';
+import Alto_0 from '../../Images/Alto_0.png';
 
 export default class BindingData extends Component {
   game = {
@@ -63,34 +63,3 @@ export default class BindingData extends Component {
     );
   }
 }
-
-// const styles = StyleSheet.create({
-//   box: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-//   fontText: {
-//     fontWeight: '600',
-//     fontSize: 24,
-//   },
-//   fontTitle: {
-//     color: '#fff',
-//     fontSize: 14,
-//   },
-//   colorTheme: {
-//     backgroundColor: '#824671CC',
-//   },
-//   image: {
-//     height: 350,
-//   },
-//   imagePreview: {
-//     height: 50,
-//     width: 50,
-//   },
-//   styleTitle: {
-//     color: '#fff',
-//     fontWeight: '700',
-//     fontSize: 20,
-//   },
-// });

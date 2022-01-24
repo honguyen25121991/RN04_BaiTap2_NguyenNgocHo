@@ -18,7 +18,7 @@ export default class BindingData extends Component {
     if (this.state.isLogin) {
       return <Text style={[styles.text]}>{this.textRender}</Text>;
     }
-    return <Text style={[styles.text]}>Binding Data Component</Text>;
+    return <Text style={[styles.text]}>{this.textLogin}</Text>;
   };
   // onPressLogin = function () {
   //   console.log('Login');

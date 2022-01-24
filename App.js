@@ -9,6 +9,8 @@ import ExamStyles from './src/Components/ExamStyles';
 import Exam_2 from './src/Components/Exam_2';
 import BindingData from './src/Components/HandlerComponent/BindingData';
 import ExamBindingData from './src/Components/HandlerComponent/ExamBindingData';
+import Exam_3 from './src/Components/Exam_3';
+import ExamBinding from './src/Components/HandlerComponent/ExamBinding';
 
 const App = () => {
   return (
@@ -21,7 +23,10 @@ const App = () => {
       {/* <ExamStyles /> */}
       {/* <Exam_2 /> */}
       {/* <BindingData /> */}
-      <ExamBindingData />
+      {/* <ExamBindingData /> */}
+      <Exam_3 />
+      {/* <ExamBinding /> */}
+      {/* //{' '} */}
     </Fragment>
   );
 };

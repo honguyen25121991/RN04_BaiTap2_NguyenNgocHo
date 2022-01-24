@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {View, Text} from 'react-native';
 
-class StateFull extends Component {
+export default class StateFull extends React.Component {
   render() {
     return (
       <View
@@ -19,5 +19,3 @@ class StateFull extends Component {
     );
   }
 }
-
-export default StateFull;
