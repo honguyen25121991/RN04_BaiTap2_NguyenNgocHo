@@ -11,6 +11,7 @@ import BindingData from './src/Components/HandlerComponent/BindingData';
 import ExamBindingData from './src/Components/HandlerComponent/ExamBindingData';
 import Exam_3 from './src/Components/Exam_3';
 import ExamBinding from './src/Components/HandlerComponent/ExamBinding';
+import GameApp from './src/GameApp';
 
 const App = () => {
   return (
@@ -24,9 +25,10 @@ const App = () => {
       {/* <Exam_2 /> */}
       {/* <BindingData /> */}
       {/* <ExamBindingData /> */}
-      <Exam_3 />
+      {/* <Exam_3 /> */}
       {/* <ExamBinding /> */}
       {/* //{' '} */}
+      <GameApp />
     </Fragment>
   );
 };
