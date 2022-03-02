@@ -25,6 +25,7 @@ import DemoCallApi from './src/DemoCallAPI';
 import Login from './src/LoginUI';
 import RegisterUI from './src/LoginUI/Register';
 import DemoCallApi1 from './src/DemoCallAPI/index1';
+import GameApp1 from './src/GameApp1';
 
 const App = () => {
   return (
@@ -44,11 +45,12 @@ const App = () => {
       {/* <ExamRenderMap /> */}
       {/* <ExamRenderFlatList /> */}
       {/* <GameApp /> */}
+      <GameApp1 />
       {/* <GameAppStateManagement /> */}
       {/* <DemoRedux /> */}
       {/* <DemoLifycycle /> */}
       {/* <DemoCallApi /> */}
-      <DemoCallApi1 />
+      {/* <DemoCallApi1 /> */}
       {/* <Login /> */}
       {/* <RegisterUI /> */}
     </Provider>
