@@ -1,35 +1,57 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {Fragment} from 'react';
-import {View, Text} from 'react-native';
-import StateFull from './src/Components/Statefull';
-import StateLess from './src/Components/Stateless';
-import DemoImages from './src/Components/DemoImages';
-import DemoTextInput from './src/Components/DemoTextInput';
-import DemoStyles from './src/Components/DemoStyles';
-import ExamStyles from './src/Components/ExamStyles';
-import Exam_2 from './src/Components/Exam_2';
-import BindingData from './src/Components/HandlerComponent/BindingData';
-import ExamBindingData from './src/Components/HandlerComponent/ExamBindingData';
-import Exam_3 from './src/Components/Exam_3';
-import ExamBinding from './src/Components/HandlerComponent/ExamBinding';
+import StateFull from './src/Component/Statefull';
+import StateLess from './src/Component/Stateless';
+import DemoImage from './src/Component/DemoImage';
+import DemoInput from './src/Component/DemoTextInput';
+import DemoStyle from './src/Component/DemoStyle';
+import Exam from './src/Component/Exam';
+import BindingData from './src/HandlerComponent/BindingData';
+import ExamBinding from './src/HandlerComponent/Exam';
+import RenderWithMap from './src/HandlerComponent/RenderWithMap';
+import DemoProps from './src/Props/DemoProps';
+import DemoScrollView from './src/Props/DemoScrollView';
+import DemoFlatList from './src/Props/DemoFlatList';
+import DemoSectionList from './src/Props/DemoSection';
+import ExamRenderMap from './src/Props/ExamRenderMap';
+import ExamRenderFlatList from './src/Props/ExamRenderFlatlist';
 import GameApp from './src/GameApp';
+import GameAppStateManagement from './src/GameAppStateManagement';
+import {Provider} from 'react-redux';
+import rootStore from './src/redux/rootStore';
+import DemoRedux from './src/DemoRedux';
+import DemoLifycycle from './src/DemoLifecycle/DemoLifycycle';
+import DemoCallApi from './src/DemoCallAPI';
+import Login from './src/LoginUI';
+import RegisterUI from './src/LoginUI/Register';
+import DemoCallApi1 from './src/DemoCallAPI/index1';
 
 const App = () => {
   return (
-    <Fragment>
-      {/* <StateFull /> */}
-      {/* <StateLess /> */}
-      {/* <DemoImages /> */}
-      {/* <DemoTextInput /> */}
-      {/* <DemoStyles /> */}
-      {/* <ExamStyles /> */}
-      {/* <Exam_2 /> */}
+    <Provider store={rootStore}>
+      {/* <StateFull />
+      <StateLess /> */}
+      {/* <DemoImage /> */}
+      {/* <DemoInput /> */}
+      {/* <DemoStyle /> */}
+      {/* <Exam /> */}
       {/* <BindingData /> */}
-      {/* <ExamBindingData /> */}
-      {/* <Exam_3 /> */}
-      {/* <ExamBinding /> */}
-      {/* //{' '} */}
-      <GameApp />
-    </Fragment>
+      {/* <RenderWithMap /> */}
+      {/* <DemoProps /> */}
+      {/* <DemoScrollView /> */}
+      {/* <DemoFlatList /> */}
+      {/* <DemoSectionList /> */}
+      {/* <ExamRenderMap /> */}
+      {/* <ExamRenderFlatList /> */}
+      {/* <GameApp /> */}
+      {/* <GameAppStateManagement /> */}
+      {/* <DemoRedux /> */}
+      {/* <DemoLifycycle /> */}
+      {/* <DemoCallApi /> */}
+      <DemoCallApi1 />
+      {/* <Login /> */}
+      {/* <RegisterUI /> */}
+    </Provider>
   );
 };
 
