@@ -1,12 +1,15 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {Component} from 'react';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default class ButtonSelect extends Component {
   render() {
-    const {title, backgroundColor} = this.props;
+    const {title, colors} = this.props;
     return (
-      <TouchableOpacity style={[styles.butonView, {backgroundColor}]}>
-        <Text style={[styles.buttonText]}>{title}</Text>
+      <TouchableOpacity>
+        <LinearGradient colors={colors} style={[styles.butonView]}>
+          <Text style={[styles.buttonText]}>{title}</Text>
+        </LinearGradient>
       </TouchableOpacity>
     );
   }
@@ -16,7 +19,6 @@ const styles = StyleSheet.create({
   butonView: {
     width: 150,
     height: 60,
-    backgroundColor: 'pink',
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',

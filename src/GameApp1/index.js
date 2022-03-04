@@ -14,6 +14,7 @@ import {Rock, Paper, Scissor, bgGame, player, playerComputer} from './assets';
 import PlayerViewItem from './components/PlayerViewItem';
 import PlaySelect from './components/PlayerSeled';
 import ButtonSelect from './components/Button';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default class GameApp1 extends Component {
   render() {
@@ -36,8 +37,8 @@ export default class GameApp1 extends Component {
             <Text style={styles.infoText}>Time :9</Text>
           </View>
           <View style={styles.buttonView}>
-            <ButtonSelect title="Play" backgroundColor="pink" />
-            <ButtonSelect title="Back" backgroundColor="yellow" />
+            <ButtonSelect title="Play" colors={['#ef0a72', '#fec5e3']} />
+            <ButtonSelect title="Back" colors={['#fdad3c', '#fbf40e']} />
           </View>
         </SafeAreaView>
       </ImageBackground>
@@ -83,5 +84,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 30,
+  },
+  // linearGradient: {
+  //   flex: 1,
+  //   paddingLeft: 15,
+  //   paddingRight: 15,
+  //   borderRadius: 5,
+  // },
+  buttonText: {
+    fontSize: 18,
+    color: '#ffffff',
   },
 });
