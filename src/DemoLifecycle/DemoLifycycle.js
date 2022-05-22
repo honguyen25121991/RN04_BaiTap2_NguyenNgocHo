@@ -18,13 +18,20 @@ export default class DemoLifycycle extends Component {
     return null;
   }
 
+  shouldComponentUpdate() {
+    console.log('shouldComponentUpdate');
+    return true;
+  }
+
+  componentDidUpdate() {}
   componentDidMount() {
-    this.setState({text: 'RN4'});
     console.log('componentDidMount');
+    this.setState({text: 'RN4'});
   }
 
   onPress() {
     this.setState({number: this.state.number + 1});
+
     // console.log(this);
   }
 
@@ -34,7 +41,9 @@ export default class DemoLifycycle extends Component {
     return (
       <View style={styles.container}>
         <Text onPress={this.onPress}>Life Cycle</Text>
-        <Child text={this.state.text} number={this.state.number} />
+        {this.state.number < 4 && (
+          <Child text={this.state.text} number={this.state.number} />
+        )}
       </View>
     );
   }

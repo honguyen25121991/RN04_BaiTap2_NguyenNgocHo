@@ -42,6 +42,17 @@ export default class DemoSectionList extends Component {
     );
   };
 
+  // renderItem1 = ({item, index}) => {
+  //   const backgroundColor = index % 2 === 0 ? '#bff' : '#eee';
+  //   return (
+  //     <CardItem
+  //       name={item.name}
+  //       age={item.age}
+  //       backgroundColor={backgroundColor}
+  //     />
+  //   );
+  // };
+
   renderSectionHeader = ({section}) => {
     return (
       <View style={styles.content}>
@@ -55,10 +66,11 @@ export default class DemoSectionList extends Component {
       <View style={styles.container}>
         <Text>Demo SectionList Component</Text>
         <SectionList
+          // contentContainerStyle={{alignItems: 'center'}}
           sections={this.listStudent}
           renderSectionHeader={this.renderSectionHeader}
           renderItem={this.renderItem}
-          stickySectionHeadersEnabled={false}
+          stickySectionHeadersEnabled={true}
         />
       </View>
     );
@@ -77,7 +89,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffb',
     borderRadius: 8,
     // width: '80%',
-    paddingVertical: 5,
+    paddingVertical: 10,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 10,

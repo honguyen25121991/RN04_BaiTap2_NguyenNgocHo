@@ -3,10 +3,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 class DemoRedux1 extends Component {
   render() {
-    console.log(this.props);
+    console.log(this.props.number);
     return (
       <View style={styles.container}>
-        <Text>DemoRedex</Text>
+        <Text>DemoRedex1</Text>
         <Text>State From Store :{this.props.number}</Text>
         <TouchableOpacity onPress={this.props.countUpNumber}>
           <Text>Count Up</Text>

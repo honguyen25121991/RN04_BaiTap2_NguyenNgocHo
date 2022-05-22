@@ -39,7 +39,11 @@ export default class Login extends Component {
         <View style={styles.footer}>
           <Text>
             Don't have an account
-            <Text style={styles.footerBottomText}>Register !</Text>
+            <Text
+              style={styles.footerBottomText}
+              onPress={() => this.props.navigation.navigate('RegisterScreen')}>
+              Register !
+            </Text>
           </Text>
         </View>
       </View>

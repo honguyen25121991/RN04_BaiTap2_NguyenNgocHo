@@ -11,7 +11,7 @@ export default class DemoInput extends Component {
           placeholder="Username"
           style={{
             width: '70%',
-            backgroundColor: '#eee',
+            backgroundColor: '#bbb',
             fontSize: 30,
             borderWidth: 1,
             borderRadius: 8,

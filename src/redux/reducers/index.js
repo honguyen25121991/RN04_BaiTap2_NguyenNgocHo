@@ -1,13 +1,16 @@
 const initState = {
-  number: 1000,
-  string: 'HelloWorld',
+  number: 10,
+  // string: 'Hello World',
 };
 
 const reducer = (state = initState, action) => {
   switch (action.type) {
-    case 'countUp':
-      state.number = state.number + 100;
-      return state;
+    case 'COUNT_DOWN': {
+      state.number = state.number - 1;
+    }
+    case 'COUNT_UP': {
+      state.number = state.number + 1;
+    }
     default:
       return {...state};
   }

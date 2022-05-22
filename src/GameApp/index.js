@@ -22,9 +22,9 @@ const selectedOptionConstant = [
 export default class GameApp extends Component {
   state = {
     playerSelected: selectedOptionConstant[0],
-    botSelected: selectedOptionConstant[1],
+    botSelected: selectedOptionConstant[2],
     selectOption: selectedOptionConstant,
-    score: 0,
+    score: 1,
     times: 9,
   };
 

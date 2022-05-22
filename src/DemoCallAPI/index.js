@@ -13,12 +13,12 @@ import BackgroundView from './components/BackgruondView';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 export default class DemoCallApi extends Component {
-  componentDidMount() {
-    fetch('http://svcy3.myclass.vn/api/Product')
-      .then(response => response.json())
-      .then(data => console.log('result', data))
-      .catch(err => console.error(err));
-  }
+  // componentDidMount() {
+  //   fetch('http://svcy3.myclass.vn/api/Product')
+  //     .then(response => response.json())
+  //     .then(data => console.log('result', data))
+  //     .catch(err => console.error(err));
+  // }
 
   state = {
     listProduct: [],

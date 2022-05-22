@@ -1,15 +1,15 @@
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import React, {Component} from 'react';
 import CardItem from './CardItem';
 
 export default class DemoProps extends Component {
   listStudent = [
-    {name: 'Nguyễn Văn A', age: 18},
-    // {name: 'Nguyễn Văn B', age: 19},
-    // {name: 'Nguyễn Văn C', age: 20},
-    // {name: 'Nguyễn Văn D', age: 21},
-    // {name: 'Nguyễn Văn E', age: 22},
-    // {name: 'Nguyễn Văn F', age: 23},
+    {name: 'Nguyễn Văn A', age: 18, address: 'HCM'},
+    // {name: 'Nguyễn Văn B', age: 19, address: 'HCM'},
+    // {name: 'Nguyễn Văn C', age: 20, address: 'HCM'},
+    // {name: 'Nguyễn Văn D', age: 21, address: 'HCM'},
+    // {name: 'Nguyễn Văn E', age: 22, address: 'HCM'},
+    // {name: 'Nguyễn Văn F', age: 23, address: 'HCM'},
   ];
 
   state = {
@@ -18,11 +18,13 @@ export default class DemoProps extends Component {
 
   renderListStudentWithMap = () => {
     return this.listStudent.map((item, index) => {
-      const backgroundColor = index % 2 === 0 ? '#bff' : '#eee';
+      const backgroundColor = index % 2 === 0 ? '#bff524' : '#eeef2b';
       return (
         <CardItem
+          key={index}
           name={item.name}
           age={item.age}
+          address={item.address}
           backgroundColor={backgroundColor}
         />
       );
@@ -39,7 +41,9 @@ export default class DemoProps extends Component {
         <Text>Demo Props Component</Text>
         {/* {this.renderListStudentWithMap()} */}
         <CardItem name={'React Native 04'} age={this.state.number} />
-        <Text onPress={this.onPressButton}>Count Up Age</Text>
+        <TouchableOpacity onPress={this.onPressButton}>
+          <Text>Count Up Age</Text>
+        </TouchableOpacity>
       </View>
     );
   }

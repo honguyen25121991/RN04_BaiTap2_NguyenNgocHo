@@ -1,4 +1,4 @@
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, StyleSheet, View} from 'react-native';
 import React, {Component} from 'react';
 
 export default class RenderWithMap extends Component {
@@ -12,27 +12,27 @@ export default class RenderWithMap extends Component {
   ];
 
   renderListStudent = () => {
-    const jsxArray = [];
+    const jsx = [];
     for (let index = 0; index < this.listStudent.length; index++) {
-      const backgroundColor = index % 2 === 0 ? '#bff' : '#eee';
+      const backgroundColor = index % 2 === 0 ? '#bef34f' : '#eee4ee';
       const element = (
         <View key={index} style={[styles.content, {backgroundColor}]}>
-          <Text style={styles.txt}>Tên: {this.listStudent[index].name}</Text>
-          <Text style={styles.txt}>Tuổi: {this.listStudent[index].age}</Text>
+          <Text style={styles.txt}>Tên :{this.listStudent[index].name}</Text>
+          <Text style={styles.txt}>Tuổi :{this.listStudent[index].age}</Text>
         </View>
       );
-      jsxArray.push(element);
+      jsx.push(element);
     }
-    return jsxArray;
+    return jsx;
   };
 
   renderListStudentWithMap = () => {
     return this.listStudent.map((item, index) => {
-      const backgroundColor = index % 2 === 0 ? '#bff' : '#eee';
+      const backgroundColor = index % 2 === 0 ? '#bef34f' : '#eee4ee';
       return (
         <View key={index} style={[styles.content, {backgroundColor}]}>
-          <Text style={styles.txt}>Tên: {item.name}</Text>
-          <Text style={styles.txt}>Tuổi: {item.age}</Text>
+          <Text style={styles.txt}>Tên :{item.name}</Text>
+          <Text style={styles.txt}>Tuổi :{item.age}</Text>
         </View>
       );
     });
@@ -42,19 +42,15 @@ export default class RenderWithMap extends Component {
     return (
       <View style={styles.container}>
         <Text>RenderWithMap</Text>
-        {/* <View style={[styles.content, {backgroundColor: '#bff'}]}>
-          <Text style={styles.txt}>Tên: {this.listStudent[0].name}</Text>
-          <Text style={styles.txt}>Tuổi: {this.listStudent[0].age}</Text>
-        </View>
-        <View style={styles.content}>
-          <Text style={styles.txt}>Tên: {this.listStudent[1].name}</Text>
-          <Text style={styles.txt}>Tuổi: {this.listStudent[1].age}</Text>
-        </View>
-        <View style={[styles.content, {backgroundColor: '#bff'}]}>
-          <Text style={styles.txt}>Tên: {this.listStudent[2].name}</Text>
-          <Text style={styles.txt}>Tuổi: {this.listStudent[2].age}</Text>
-        </View> */}
+        {/* {this.renderListStudent()} */}
         {this.renderListStudentWithMap()}
+        {/* const backgroundColor = index % 2 === 0 ? '#bef34f' : '#eee4ee';
+      return (
+        <View key={index} style={[styles.content, {backgroundColor}]}>
+          <Text style={styles.txt}>Tên :{item.name}</Text>
+          <Text style={styles.txt}>Tuổi :{item.age}</Text>
+        </View>
+      ); */}
       </View>
     );
   }
@@ -67,13 +63,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   content: {
-    backgroundColor: '#eee',
-    borderRadius: 8,
     width: '80%',
-    paddingVertical: 20,
+    backgroundColor: '#eee',
+    borderRadius: 10,
+    paddingVertical: 10,
+    marginVertical: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 10,
     borderWidth: 1,
   },
   txt: {

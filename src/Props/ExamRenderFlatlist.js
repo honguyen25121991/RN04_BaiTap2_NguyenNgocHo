@@ -49,14 +49,13 @@ export default class ExamRenderFlatList extends Component {
       icon={game.icon}
       subTitle={game.subTitle}
     />
-    // <View style={{backgroundColor: 'red', height: 100}} />
   );
 
   render() {
     return (
       <View style={styles.container}>
         <Text>ExamRenderFlatList</Text>
-        <Icon name="rocket" size={30} color="#900" />
+        <Icon name="rocket" size={30} />
         <FlatList
           style={{flexGrow: 0}}
           data={this.listGame}

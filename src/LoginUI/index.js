@@ -6,20 +6,20 @@ import {
   View,
 } from 'react-native';
 import React, {Component} from 'react';
-import AntIcon from 'react-native-vector-icons/AntDesign';
-import TextInput from './components/TextInput';
+import LoginUI from './LoginUI';
+import Register from './Register';
+import RegisterFomik from './RegisterFomik';
 
-export default class Login extends Component {
-  state = {
-    isShowLoading: true,
-  };
-  mavigate = () => {
-    this.setState({
-      isShowLoading: !this.isShowLoading,
-    });
-  };
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
+export default class LoginScreens extends Component {
   render() {
-    const {isShowLoading} = this.state;
-    return <>{isShowLoading ? <LoginUI /> : <Register />}</>;
+    return (
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="LoginScreen" component={LoginUI} />
+        <Stack.Screen name="RegisterScreen" component={Register} />
+      </Stack.Navigator>
+    );
   }
 }

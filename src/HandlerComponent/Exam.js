@@ -4,33 +4,61 @@ import Alto_icon from '../images/Alto_icon.png';
 import Alto_0 from '../images/Alto_0.png';
 
 export default class ExamBinding extends Component {
-  game = {
-    id: 0,
-    title: "Alto's Odyssey",
-    icon: Alto_icon,
-    subTitle:
-      'Just beyond the horizon sits a majestic desert, vast and unexplored.',
-    description:
-      'Just beyond the horizon sits a majestic desert, vast and unexplored.\nJoin Alto and his friends and set off on an endless sandboarding journey to discover its secrets. Soar above windswept dunes, traverse thrilling canyons, and explore long-hidden temples in a fantastical place far from home.',
-    age: '9+',
-    rating: 4.4,
-    banner: Alto_0,
-    backgroundColor: '#824671CC',
-  };
+  game = [
+    {
+      id: 0,
+      title: "Alto's Odyssey",
+      icon: Alto_icon,
+      subTitle:
+        'Just beyond the horizon sits a majestic desert, vast and unexplored.',
+      description:
+        'Just beyond the horizon sits a majestic desert, vast and unexplored.\nJoin Alto and his friends and set off on an endless sandboarding journey to discover its secrets. Soar above windswept dunes, traverse thrilling canyons, and explore long-hidden temples in a fantastical place far from home.',
+      age: '9+',
+      rating: 4.4,
+      banner: Alto_0,
+      backgroundColor: '#824671CC',
+    },
+    {
+      id: 2,
+      title: "Alto's Odyssey",
+      icon: Alto_icon,
+      subTitle:
+        'Just beyond the horizon sits a majestic desert, vast and unexplored.',
+      description:
+        'Just beyond the horizon sits a majestic desert, vast and unexplored.\nJoin Alto and his friends and set off on an endless sandboarding journey to discover its secrets. Soar above windswept dunes, traverse thrilling canyons, and explore long-hidden temples in a fantastical place far from home.',
+      age: '9+',
+      rating: 4.4,
+      banner: Alto_0,
+      backgroundColor: '#824671CC',
+    },
+    {
+      id: 3,
+      title: "Alto's Odyssey",
+      icon: Alto_icon,
+      subTitle:
+        'Just beyond the horizon sits a majestic desert, vast and unexplored.',
+      description:
+        'Just beyond the horizon sits a majestic desert, vast and unexplored.\nJoin Alto and his friends and set off on an endless sandboarding journey to discover its secrets. Soar above windswept dunes, traverse thrilling canyons, and explore long-hidden temples in a fantastical place far from home.',
+      age: '9+',
+      rating: 4.4,
+      banner: Alto_0,
+      backgroundColor: '#824671CC',
+    },
+  ];
 
   render() {
     return (
       <View style={styles.container}>
-        <Image source={this.game.banner} />
+        <Image source={this.game[0].banner} />
         <View
           style={[
             styles.infoContent,
-            {backgroundColor: this.game.backgroundColor},
+            {backgroundColor: this.game[0].backgroundColor},
           ]}>
-          <Image source={this.game.icon} style={styles.gameIcon} />
+          <Image source={this.game[0].icon} style={styles.gameIcon} />
           <View style={styles.info}>
-            <Text>{this.game.title}</Text>
-            <Text>{this.game.subTitle}</Text>
+            <Text>{this.game[0].title}</Text>
+            <Text>{this.game[0].subTitle}</Text>
           </View>
         </View>
       </View>

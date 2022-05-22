@@ -1,4 +1,4 @@
-import {Text, View, StyleSheet, Image} from 'react-native';
+import {Text, View, StyleSheet, ScrollView} from 'react-native';
 import React, {Component} from 'react';
 import Alto_icon from '../images/Alto_icon.png';
 import Pillar_icon from '../images/Pillar_icon.png';
@@ -55,7 +55,7 @@ export default class ExamRenderMap extends Component {
     return (
       <View style={styles.container}>
         <Text>ExamRenderMap</Text>
-        {this.renderGameItem()}
+        <ScrollView>{this.renderGameItem()}</ScrollView>
       </View>
     );
   }

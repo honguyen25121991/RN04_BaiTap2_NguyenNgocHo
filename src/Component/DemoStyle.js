@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import AntIcon from 'react-native-vector-icons/AntDesign';
 
 export default class DemoStyle extends Component {
   render() {
@@ -10,17 +11,23 @@ export default class DemoStyle extends Component {
         <View
           style={{
             flex: 1,
-            // flexDirection: 'row',
-            // justifyContent: 'center',
-            // alignItems: 'flex-end',
-            // paddingTop: 15,
-            // paddingBottom: 15,
+            flexDirection: 'column',
           }}>
           <View style={[styles.box, styles.boxPurple]} />
           <View style={{flexDirection: 'row'}}>
-            <View style={styles.box} />
+            <View
+              style={[
+                styles.box,
+                {
+                  backgroundColor: '#fbb',
+                  marginVertical: 20,
+                  marginHorizontal: 30,
+                },
+              ]}
+            />
             <View style={styles.box} />
           </View>
+
           <View style={styles.box} />
         </View>
       </View>

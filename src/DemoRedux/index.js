@@ -8,9 +8,11 @@ class DemoRedux extends Component {
       <View style={styles.container}>
         <Text>Demo Redux</Text>
         <Text>State From Store: {this.props.number} </Text>
-
-        <TouchableOpacity onPress={this.props.countUpNumber}>
+        <TouchableOpacity onPress={this.props.countUpReducer}>
           <Text>Count up</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={this.props.countDownReducer}>
+          <Text>Count Down</Text>
         </TouchableOpacity>
       </View>
     );
@@ -18,14 +20,18 @@ class DemoRedux extends Component {
 }
 
 const mapStateToProps = state => {
-  return {number: state.countUpReducer.number};
+  return {
+    number: state.countReducer.number,
+  };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    countUpNumber: () => {
-      console.log('click');
-      dispatch({type: 'countUp'});
+    countUpReducer: () => {
+      dispatch({type: 'COUNT_UP'});
+    },
+    countDownReducer: () => {
+      dispatch({type: 'COUNT_DOWN'});
     },
   };
 };

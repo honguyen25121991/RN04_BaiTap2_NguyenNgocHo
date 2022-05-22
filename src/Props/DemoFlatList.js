@@ -48,18 +48,4 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     // alignItems: 'center',
   },
-  content: {
-    backgroundColor: '#eee',
-    borderRadius: 8,
-    width: '80%',
-    paddingVertical: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 10,
-    borderWidth: 1,
-  },
-  txt: {
-    fontSize: 24,
-    fontWeight: '700',
-  },
 });

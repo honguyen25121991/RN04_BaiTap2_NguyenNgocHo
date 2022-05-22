@@ -15,7 +15,7 @@ const selectedOptionConstant = [
 const initState = {
   playerSelected: selectedOptionConstant[0],
   playerImage: Player,
-  botSelected: selectedOptionConstant[1],
+  botSelected: selectedOptionConstant[2],
   botImage: Bot,
   selectOption: selectedOptionConstant,
   score: 0,

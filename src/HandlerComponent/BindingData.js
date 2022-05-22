@@ -1,65 +1,67 @@
 import {
   Text,
-  View,
   StyleSheet,
-  TouchableHighlight,
+  View,
   TouchableOpacity,
+  TouchableHighlight,
 } from 'react-native';
 import React, {Component} from 'react';
 
 export default class BindingData extends Component {
-  textRender = 'Hello React Native 04';
-  textLogin = 'Should Login My App';
+  name = 'React Native';
+  address = 'HCM';
   state = {
-    isLogin: false,
+    isLogin: true,
   };
-
-  renderLogin = () => {
+  renderName() {
     if (this.state.isLogin) {
-      return <Text style={styles.txt}>{this.textRender}</Text>;
+      return (
+        <>
+          <Text>{this.name}</Text>
+        </>
+      );
     }
-    return <Text style={styles.txt}>{this.textLogin}</Text>;
-  };
-
-  onPressButton = function () {
-    console.log('Function this:', this.state.isLogin);
-  };
-  onPressLogout = () => {
+    return (
+      <>
+        <Text>{this.address}</Text>
+      </>
+    );
+  }
+  handlePress = () => {
     this.setState({isLogin: false});
-    console.log('Logout Press', this.state.isLogin);
   };
-
-  onPressLogin = () => {
-    this.setState({isLogin: !this.state.isLogin});
-    console.log('Login Press', this.state.isLogin);
+  handlePress1 = () => {
+    this.setState({isLogin: true});
   };
-
   render() {
-    console.log('render Run', this.state.isLogin);
     return (
       <View style={styles.container}>
-        <Text style={styles.txt}>Binding Data Component</Text>
-        {/* render if else #1*/}
-        {this.renderLogin()}
-        {/* render if else #2*/}
-        <Text style={styles.txt}>
-          {this.state.isLogin ? this.textRender : this.textLogin}
-        </Text>
-        {this.state.isLogin ? (
-          <Text style={styles.txt}>{this.textRender}</Text>
+        <Text>BindingData</Text>
+        {this.renderName()}
+
+        {/* {this.state.isLogin ? (
+          <>
+            <Text>{this.address}</Text>
+          </>
         ) : (
-          <Text style={[styles.txt, styles.txtRed]}>{this.textLogin}</Text>
-        )}
-        <TouchableOpacity style={styles.btn} onPress={this.onPressLogin}>
-          <Text style={{color: '#fff'}}>
-            {this.state.isLogin ? 'Logout' : 'Login'}
-          </Text>
+          <Text>{this.name}</Text>
+        )} */}
+        {/* {this.state.isLogin && (
+          <>
+            <Text>{this.address}</Text>
+          </>
+          
+        )} */}
+        <TouchableOpacity
+          style={styles.btnSignIn}
+          onPress={() => this.handlePress()}>
+          <Text style={styles.txtSignIn}>Sign In</Text>
         </TouchableOpacity>
         <TouchableHighlight
-          style={styles.btn}
-          onPress={() => this.onPressLogout()}
-          underlayColor={'green'}>
-          <Text style={{color: '#fff'}}>Logout</Text>
+          style={[styles.btnSignIn, styles.btnGreen]}
+          onPress={this.handlePress1}
+          underlayColor="#fbf">
+          <Text style={styles.txtSignIn}>Sign In</Text>
         </TouchableHighlight>
       </View>
     );
@@ -72,18 +74,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  txt: {
-    fontSize: 24,
-    fontWeight: '700',
-  },
-  txtRed: {color: 'red'},
-  btn: {
+  btnSignIn: {
     height: 50,
     width: 100,
+    backgroundColor: '#bbf',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red',
-    borderRadius: 8,
+    borderRadius: 10,
     marginVertical: 10,
+  },
+  btnGreen: {
+    backgroundColor: '#bfb',
+  },
+  txtSignIn: {
+    fontSize: 18,
   },
 });
